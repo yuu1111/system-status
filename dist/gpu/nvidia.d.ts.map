@@ -1,0 +1,1 @@
+{"version":3,"file":"nvidia.d.ts","sourceRoot":"","sources":["../../src/gpu/nvidia.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,aAAa,EAAE,MAAM,eAAe,CAAC;AACnD,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAiB7C,wBAAgB,cAAc,CAAC,MAAM,EAAE,MAAM,GAAG,SAAS,EAAE,CAkD1D;AAED,wBAAsB,aAAa,CAClC,MAAM,EAAE,aAAa,EACrB,SAAS,SAAQ,GACf,OAAO,CAAC,SAAS,EAAE,CAAC,CActB"}
