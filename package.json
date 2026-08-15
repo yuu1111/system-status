@@ -1,18 +1,18 @@
 {
-	"name": "@yuu1111/system-status",
-	"version": "0.1.0",
+	"name": "system-vitals",
+	"version": "1.0.0",
 	"description": "Cross-platform CPU, memory, disk, and GPU status collection for Node.js and Bun",
 	"type": "module",
 	"license": "MIT",
 	"author": "yuu1111",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/yuu1111/system-status.git"
+		"url": "git+https://github.com/yuu1111/system-vitals.git"
 	},
 	"bugs": {
-		"url": "https://github.com/yuu1111/system-status/issues"
+		"url": "https://github.com/yuu1111/system-vitals/issues"
 	},
-	"homepage": "https://github.com/yuu1111/system-status#readme",
+	"homepage": "https://github.com/yuu1111/system-vitals#readme",
 	"sideEffects": false,
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",

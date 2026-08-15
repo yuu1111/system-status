@@ -1,9 +1,15 @@
-# @yuu1111/system-status
+# system-vitals
 
 CPU、メモリ、ディスク、GPUの状態をOSやGPUベンダーに依存しない生データへ正規化する、Node.js／Bun向けESMパッケージ。
 
+## インストール
+
+```sh
+npm install system-vitals
+```
+
 ```ts
-import { getSystemStatus } from "@yuu1111/system-status";
+import { getSystemStatus } from "system-vitals";
 
 const status = await getSystemStatus();
 ```

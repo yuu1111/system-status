@@ -25,7 +25,7 @@ describe("Command runner", () => {
 
 	test("実行不能なコマンドをrejectする", async () => {
 		expect(
-			runCommand("system-status-command-that-does-not-exist", [], 100),
+			runCommand("system-vitals-command-that-does-not-exist", [], 100),
 		).rejects.toBeDefined();
 	});
 });
