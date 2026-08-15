@@ -1,12 +1,21 @@
 # system-vitals
 
-CPU、メモリ、ディスク、GPUの状態をOSやGPUベンダーに依存しない生データへ正規化する、Node.js／Bun向けESMパッケージ。
+English | [日本語](./README.ja.md)
 
-## インストール
+An ESM package for Node.js and Bun that normalizes CPU, memory, disk, and GPU
+status across operating systems and GPU vendors into a consistent data model.
+
+## Requirements
+
+- Node.js 20 or later, or Bun
+
+## Installation
 
 ```sh
 npm install system-vitals
 ```
+
+## Usage
 
 ```ts
 import { getSystemStatus } from "system-vitals";
@@ -14,42 +23,49 @@ import { getSystemStatus } from "system-vitals";
 const status = await getSystemStatus();
 ```
 
-## 対応状況
+## Platform support
 
-| 環境 | CPU・メモリ | ディスク | GPU |
-|---|---:|---:|---|
-| Windows | CIM / Node.js | CIM | NVIDIAは`nvidia-smi`、AMD・IntelはCIMによる検出 |
-| Linux | `/proc` / Node.js | `df` | NVIDIAは`nvidia-smi`、AMD・Intelはsysfs |
-| macOS | `sysctl` / Node.js | `df` | `system_profiler`による検出 |
+| Platform | CPU and memory | Disks | GPUs |
+| --- | --- | --- | --- |
+| Windows | CIM / Node.js | CIM | NVIDIA through `nvidia-smi`; AMD and Intel detection through CIM |
+| Linux | `/proc` / Node.js | `df` | NVIDIA through `nvidia-smi`; AMD and Intel through sysfs |
+| macOS | `sysctl` / Node.js | `df` | Detection through `system_profiler` |
 
-WindowsのAMD・Intel GPUは名前とベンダーの検出が中心で、使用率、温度、電力などは取得できない場合がある。取得不能なメトリクスは`undefined`になる。
+On Windows, AMD and Intel GPU support focuses on name and vendor detection.
+Metrics such as utilization, temperature, and power may be unavailable. Metrics
+that cannot be collected are returned as `undefined`.
 
-## データ単位
+## Units
 
-| 値 | 単位 |
-|---|---|
-| メモリ、VRAM、ディスク | bytes |
-| 使用率、Fan速度 | 0–100 |
-| 温度 | ℃ |
-| 電力 | W |
-| Clock | MHz |
+| Value | Unit |
+| --- | --- |
+| Memory, VRAM, disk | bytes |
+| Utilization, fan speed | 0–100 |
+| Temperature | °C |
+| Power | W |
+| Clock speed | MHz |
 | Uptime | seconds |
 
-`diagnostics`は部分的な取得失敗を返す。`code`を機械判定に使い、`message`はログや調査の補助として扱う。表示文言、警告しきい値、Ollamaなどアプリケーション固有の状態取得は利用側の責務とする。
+The `diagnostics` array reports partial collection failures. Use `code` for
+programmatic checks and `message` for logging and investigation. Presentation,
+alert thresholds, and application-specific status collection are left to the
+consumer.
 
-CPU使用率は既定で100ms計測する。不要なら待ち時間を省略できる。
+CPU utilization is sampled for 100 ms by default. Set the interval to `0` to
+skip sampling and avoid the delay.
 
 ```ts
 const status = await getSystemStatus({ cpuSampleMs: 0 });
 ```
 
-外部コマンドは既定で10秒後に停止する。環境に合わせて変更できる。
+External commands time out after 10 seconds by default. Adjust the timeout to
+match the environment.
 
 ```ts
 const status = await getSystemStatus({ commandTimeoutMs: 5_000 });
 ```
 
-## 開発
+## Development
 
 ```sh
 bun install
@@ -61,7 +77,8 @@ bun run test:node
 npm pack --dry-run
 ```
 
-`build`はNode.jsから直接importできるESMと型定義を`dist/`へ生成する。
+The build generates Node.js-compatible ESM and TypeScript declarations in
+`dist/`.
 
 ## License
 

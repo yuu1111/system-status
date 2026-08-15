@@ -1,6 +1,6 @@
 {
 	"name": "system-vitals",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Cross-platform CPU, memory, disk, and GPU status collection for Node.js and Bun",
 	"type": "module",
 	"license": "MIT",
@@ -24,7 +24,8 @@
 	},
 	"files": [
 		"dist",
-		"README.md"
+		"README.md",
+		"README.ja.md"
 	],
 	"engines": {
 		"node": ">=20"
