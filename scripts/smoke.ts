@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { getSystemStatus } from "../dist/index.js";
+import { getSystemStatus } from "../dist/index";
 
 const status = await getSystemStatus({ cpuSampleMs: 0 });
 

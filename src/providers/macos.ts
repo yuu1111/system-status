@@ -1,7 +1,7 @@
-import type { CommandRunner } from "../command.js";
-import type { GpuStatus, GpuVendor, StatusDiagnostic } from "../types.js";
-import type { PlatformStatus } from "./types.js";
-import { parseDf } from "./unix.js";
+import type { CommandRunner } from "../command";
+import type { GpuStatus, GpuVendor, StatusDiagnostic } from "../types";
+import type { PlatformStatus } from "./types";
+import { parseDf } from "./unix";
 
 type DisplayProfiler = {
 	SPDisplaysDataType?: Array<{

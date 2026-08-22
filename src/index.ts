@@ -5,16 +5,16 @@ import {
 	totalmem,
 	uptime,
 } from "node:os";
-import { type CommandRunner, runCommand } from "./command.js";
-import { sampleCpuUtilization } from "./cpu.js";
-import { getNvidiaGpus } from "./gpu/nvidia.js";
-import { getLinuxStatus } from "./providers/linux.js";
-import { getMacosStatus } from "./providers/macos.js";
-import type { PlatformStatus } from "./providers/types.js";
-import { getWindowsStatus } from "./providers/windows.js";
-import type { GpuStatus, SystemPlatform, SystemStatus } from "./types.js";
+import { type CommandRunner, runCommand } from "./command";
+import { sampleCpuUtilization } from "./cpu";
+import { getNvidiaGpus } from "./gpu/nvidia";
+import { getLinuxStatus } from "./providers/linux";
+import { getMacosStatus } from "./providers/macos";
+import type { PlatformStatus } from "./providers/types";
+import { getWindowsStatus } from "./providers/windows";
+import type { GpuStatus, SystemPlatform, SystemStatus } from "./types";
 
-export type { CommandRunner } from "./command.js";
+export type { CommandRunner } from "./command";
 export type {
 	CpuStatus,
 	DiskStatus,
@@ -25,7 +25,7 @@ export type {
 	StatusDiagnosticCode,
 	SystemPlatform,
 	SystemStatus,
-} from "./types.js";
+} from "./types";
 
 export type GetSystemStatusOptions = {
 	/** CPU使用率を計測する間隔。0を指定すると計測を省略する */

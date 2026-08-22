@@ -1,1 +1,1 @@
-{"version":3,"file":"unix.d.ts","sourceRoot":"","sources":["../../src/providers/unix.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,aAAa,CAAC;AAE9C,wBAAgB,OAAO,CAAC,MAAM,EAAE,MAAM,EAAE,SAAS,EAAE,MAAM,GAAG,UAAU,EAAE,CAavE"}
+{"version":3,"file":"unix.d.ts","sourceRoot":"","sources":["../../src/providers/unix.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,UAAU,CAAC;AAE3C,wBAAgB,OAAO,CAAC,MAAM,EAAE,MAAM,EAAE,SAAS,EAAE,MAAM,GAAG,UAAU,EAAE,CAavE"}

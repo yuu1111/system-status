@@ -1,6 +1,6 @@
-import type { CommandRunner } from "../command.js";
-import type { DiskStatus, GpuStatus, GpuVendor } from "../types.js";
-import type { PlatformStatus } from "./types.js";
+import type { CommandRunner } from "../command";
+import type { DiskStatus, GpuStatus, GpuVendor } from "../types";
+import type { PlatformStatus } from "./types";
 
 type WindowsWireStatus = {
 	cpuName?: string;

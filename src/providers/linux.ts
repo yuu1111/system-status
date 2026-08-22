@@ -1,14 +1,14 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { CommandRunner } from "../command.js";
+import type { CommandRunner } from "../command";
 import type {
 	DiskStatus,
 	GpuStatus,
 	GpuVendor,
 	StatusDiagnostic,
-} from "../types.js";
-import type { PlatformStatus } from "./types.js";
-import { parseDf } from "./unix.js";
+} from "../types";
+import type { PlatformStatus } from "./types";
+import { parseDf } from "./unix";
 
 async function readText(path: string): Promise<string | undefined> {
 	try {

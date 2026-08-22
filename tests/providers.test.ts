@@ -1,16 +1,13 @@
 import { describe, expect, test } from "bun:test";
 import { join } from "node:path";
-import { runCommand } from "../src/command.js";
-import { sampleCpuUtilization } from "../src/cpu.js";
-import { getNvidiaGpus, parseNvidiaSmi } from "../src/gpu/nvidia.js";
-import { getSystemStatus } from "../src/index.js";
-import { getLinuxStatus } from "../src/providers/linux.js";
-import { getMacosStatus, parseSystemProfiler } from "../src/providers/macos.js";
-import { parseDf } from "../src/providers/unix.js";
-import {
-	getWindowsStatus,
-	parseWindowsStatus,
-} from "../src/providers/windows.js";
+import { runCommand } from "../src/command";
+import { sampleCpuUtilization } from "../src/cpu";
+import { getNvidiaGpus, parseNvidiaSmi } from "../src/gpu/nvidia";
+import { getSystemStatus } from "../src/index";
+import { getLinuxStatus } from "../src/providers/linux";
+import { getMacosStatus, parseSystemProfiler } from "../src/providers/macos";
+import { parseDf } from "../src/providers/unix";
+import { getWindowsStatus, parseWindowsStatus } from "../src/providers/windows";
 
 describe("Command runner", () => {
 	test("標準出力をtrimして返す", async () => {

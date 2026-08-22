@@ -1,4 +1,4 @@
-import type { DiskStatus, GpuStatus, StatusDiagnostic } from "../types.js";
+import type { DiskStatus, GpuStatus, StatusDiagnostic } from "../types";
 
 export type PlatformStatus = {
 	cpuName?: string;

@@ -1,4 +1,4 @@
-import type { DiskStatus } from "../types.js";
+import type { DiskStatus } from "../types";
 
 export function parseDf(output: string, blockSize: number): DiskStatus[] {
 	return output

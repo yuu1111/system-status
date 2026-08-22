@@ -1,5 +1,5 @@
-import type { CommandRunner } from "../command.js";
-import type { GpuStatus } from "../types.js";
+import type { CommandRunner } from "../command";
+import type { GpuStatus } from "../types";
 
 const MEBIBYTE = 1024 ** 2;
 

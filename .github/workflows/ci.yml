@@ -58,8 +58,8 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Smoke-test with Node.js
-        run: node scripts/smoke.mjs
+      - name: Smoke-test with Bun
+        run: bun scripts/smoke.ts
 
       - name: Verify package contents
         if: runner.os == 'Linux'
