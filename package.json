@@ -36,7 +36,7 @@
 		"lint": "biome check .",
 		"format": "biome check --write --unsafe .",
 		"test": "bun test",
-		"test:node": "npm run build && bun scripts/smoke.ts",
+		"test:node": "npm run build && node --import tsx scripts/smoke.ts",
 		"prepack": "npm run build"
 	},
 	"keywords": [
@@ -57,6 +57,7 @@
 		"@types/node": "^26.2.0",
 		"@yuu1111/biome-config": "^1.0.4",
 		"@yuu1111/tsconfig": "^1.0.4",
+		"tsx": "^4.23.12",
 		"typescript": "^7.0.2"
 	}
 }

@@ -51,8 +51,8 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Smoke-test with Bun
-        run: bun scripts/smoke.ts
+      - name: Smoke-test with Node.js
+        run: node --import tsx scripts/smoke.ts
 
       - name: Verify release version
         shell: bash
